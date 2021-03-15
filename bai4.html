@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="show"></p>
+</body>
+</html>
+<script>
+    let fibonacci;
+    let x=1;let y=1;
+    let dem=0;
+    do {
+        fibonacci=x;
+        x=y;
+        y=x+fibonacci;
+        document.getElementById('show').innerHTML+=fibonacci+'<br>';
+
+    }
+    while ((fibonacci%5)!=0);
+</script>

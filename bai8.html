@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="chơi" id="btn" onclick="ocl()">
+</body>
+</html>
+<script>
+    function ocl() {
+        let min=parseInt(prompt("Mời nhập khoảng từ:"));
+        let max=parseInt(prompt("Tới:"));
+        let socandoan=Math.floor((Math.random()*max)+min);
+
+        let solandoan = 0;
+        do {
+            let sodoan = parseInt(prompt("Mời đoán 1 số trong khoảng " + min + " tới " + max));
+            solandoan++;
+            if (socandoan==sodoan){
+                alert("Bạn đã đoán đúng!! số cần tìm là: "+sodoan)
+                break;
+            }
+            else if (socandoan > sodoan) {
+                alert("Số cần đoán lớn hơn mời nhập lại"+sodoan)
+            }
+            else if (socandoan < sodoan) {
+                alert("Số cần đoán nhỏ hơn mời nhập lại"+sodoan)
+            }
+            if (solandoan==3){
+                alert("Quá 3 lần đoán GAME OVER!!")
+                    break;
+            }
+        }while (solandoan<=3)
+
+
+
+
+
+
+
+    }
+</script>
